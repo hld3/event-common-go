@@ -1,4 +1,4 @@
-package main
+package events
 
 type UserDataEvent struct {
 	NodeId   string `json:"nodeId"`
