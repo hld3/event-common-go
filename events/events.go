@@ -1,5 +1,13 @@
 package events
 
+type Payload interface{}
+
+type BaseEvent struct {
+	MessageId string  `json:"messageId"`
+	DateCode  string  `json:"dateCode"`
+	Payload   Payload `json:"payload"`
+}
+
 type UserDataEvent struct {
 	NodeId         string `json:"nodeId"`
 	UserId         string `json:"userId"`
