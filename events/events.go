@@ -1,7 +1,7 @@
 package events
 
 type Payload interface{
-    isEventPayload()
+    IsEventPayload()
 }
 
 type BaseEvent struct {
@@ -19,7 +19,7 @@ type UserDataEvent struct {
 	ReceiveUpdates bool   `json:"receiveUpdates"`
 }
 
-func (p *UserDataEvent) isEventPayload() {}
+func (p UserDataEvent) IsEventPayload() {}
 
 type GroupDataEvent struct {
 	Name             string `json:"name"`
@@ -30,4 +30,4 @@ type GroupDataEvent struct {
 	LearningLanguage string `json:"learningLanguage"`
 }
 
-func (p *GroupDataEvent) isEventPayload() {}
+func (p GroupDataEvent) IsEventPayload() {}
